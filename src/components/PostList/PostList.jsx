@@ -99,7 +99,7 @@ class PostList extends Component {
                 }
                 {
                     !loading && !postList.length &&
-                    <p className="no-posts">There is no posts to display!</p>
+                    <p className="no-posts">There is no post to display!</p>
                 }
             </section>
         );

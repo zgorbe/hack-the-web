@@ -96,7 +96,7 @@ class Contact extends Component {
                     </div>
                 </Card>
                 { 
-                    authenticated && feedbackList.length &&
+                    authenticated && feedbackList.length > 0 &&
                     <h2>Feedbacks</h2>
                 }
                 {
