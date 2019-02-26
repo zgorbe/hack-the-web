@@ -1,0 +1,92 @@
+.posts {
+    margin-top: 1em;
+    .post {
+        margin: 2em 0;
+        .edit-form {
+            box-shadow: 0 1px 3px 0 rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 2px 1px -1px rgba(0,0,0,.12);
+            padding: 1em;
+            input {
+                margin-bottom: 1em;
+                width: 100%;
+            }
+            .buttons {
+                margin-top: 1em;
+                text-align: center;
+                button {
+                    margin-right: 1em;
+                }
+            }
+
+            .p-editor-container + div {
+                display: inline-block;
+                margin-top: 1em;
+            }
+
+            @media screen and (min-width: 768px) {
+                padding: 2em;
+            }
+        }
+        .p-card-body {
+            padding: 1em;
+            
+            .p-card-title {
+                line-height: 1.5em;
+                margin-bottom: 1em;
+            }
+            .p-card-content {
+                line-height: 1.5em;
+                text-align: justify;
+            }
+            .p-card-footer {
+                font-weight: bold;
+                text-align: right;
+            }
+            @media screen and (min-width: 768px) {
+                padding: 2em;
+            }
+        }
+        .pi-pencil {
+            cursor: pointer;
+            margin-left: 0.5em;
+        }
+
+        pre.ql-syntax {
+            padding: 0.5em;
+        }
+    }
+
+    header {
+        margin-bottom: 1em;
+        text-align: right;
+        
+        button {
+            margin-left: 1em;
+        }
+        div {
+            display: inline-block;
+        }
+    }
+    
+    .no-posts {
+        color: #333;
+        font-size: 1.5em;
+        font-weight: bold;
+        margin: 2em;
+        text-align: center;
+    }
+
+    .p-progressbar {
+        height: 1em;
+        margin-top: 20vh;
+    }
+
+    .p-selectbutton span.p-button-text{
+        padding-left: .5em;
+        padding-right: .5em;
+
+        @media screen and (min-width: 768px) {
+            padding-left: 1em;
+            padding-right: 1em;
+        }
+    }
+}

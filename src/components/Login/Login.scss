@@ -1,0 +1,27 @@
+.login {
+    .login-header {
+        margin-top: 20px;
+        text-align: center;
+    }
+    .login-button {
+        float: right;
+    }
+    .login-form {
+        margin: 0 auto;
+        width: 300px;
+        div {
+            margin: 1em 0;
+        }
+        input {
+            display: block;
+            width: 100%;
+        }
+        label {
+            display: inline-block;
+            margin: 0.5em 0;
+        }
+        @media screen and (min-width: 992px) {
+            width: 400px;
+        }
+    }
+}

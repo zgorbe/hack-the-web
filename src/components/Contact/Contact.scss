@@ -1,0 +1,41 @@
+.contact-form {
+    margin-top: 2em;
+    
+    h2 {
+        color: #333;
+        margin-top: 2em;
+    }
+
+    .p-card-title {
+        text-align: center;
+    }
+    
+    .email-input {
+        margin: 2em 0 2em 0;
+    }
+
+    .ql-editor.ql-blank::before {
+        font-style: normal;
+    }
+    .p-editor-container.error {
+        .p-editor-content, .p-editor-toolbar {
+            border-color: red;
+        }
+        .p-editor-toolbar {
+            border-bottom-color: #c8c8c8;
+        }
+    }
+    .buttons {
+        margin-top: 2em;
+        text-align: center;
+        button {
+            margin-right: 1em;
+        }
+    }
+    .post {
+        margin-top: 2em;
+        .p-card-title {
+            text-align: left;
+        }
+    }
+}

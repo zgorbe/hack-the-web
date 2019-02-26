@@ -1,0 +1,12 @@
+{
+    "rules": {
+        "posts": {
+            ".read": "true",
+            ".write": "auth.uid === 'hEBrYdCL9DRDYldBlr222wKbiRm1'"
+        },
+        "feedbacks": {
+            ".read": "auth.uid === 'hEBrYdCL9DRDYldBlr222wKbiRm1'",
+            ".write": "true"
+        }
+    }
+}
