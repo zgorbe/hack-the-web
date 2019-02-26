@@ -26,9 +26,7 @@ class PostList extends Component {
                 loading: false
             });
 
-            this.postList.current.querySelectorAll('.post pre').forEach(block => {
-                hljs.highlightBlock(block);
-            });
+            this.updateHighlighting();        
         });
     }
 
@@ -38,6 +36,12 @@ class PostList extends Component {
     
     filterOutNewPost = () => {
         return this.state.postList.filter(post => post.id !== -1);
+    }
+
+    updateHighlighting = () => {
+        this.postList.current.querySelectorAll('.post pre').forEach(block => {
+            hljs.highlightBlock(block);
+        });
     }
 
     handleNewClick = () => {
@@ -63,6 +67,8 @@ class PostList extends Component {
         this.setState({
             languageFilter: languageFilter,
             postList: languageFilter.length ? postList.filter(post => languageFilter.includes(post.language)) : postList
+        }, () => {
+            this.updateHighlighting();
         });
     }
     render() {
