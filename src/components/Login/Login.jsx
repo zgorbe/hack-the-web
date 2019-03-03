@@ -68,7 +68,7 @@ class Login extends Component {
                     </div>
                     <div>
                         <label>Password</label>
-                        <Password className={ passwordInvalid ? 'error' : '' } value={ this.state.password } onChange={ this.handlePasswordChange } onKeyUp={ this.handleKeyUp } />
+                        <Password feedback={ false } className={ passwordInvalid ? 'error' : '' } value={ this.state.password } onChange={ this.handlePasswordChange } onKeyUp={ this.handleKeyUp } />
                         { passwordInvalid && <div className="error">{ errorMessage }</div> }
                     </div>
                     <div className="login-button">

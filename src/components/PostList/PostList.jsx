@@ -35,7 +35,7 @@ class PostList extends Component {
     }
     
     filterOutNewPost = () => {
-        return this.state.postList.filter(post => post.id !== -1);
+        return this.state.postList.filter(post => post.id !== 'new');
     }
 
     updateHighlighting = () => {
@@ -48,7 +48,7 @@ class PostList extends Component {
         const postList = this.filterOutNewPost();
 
         const newPost = {
-            id: -1,
+            id: 'new',
             title: '',
             content: '',
             language: '',

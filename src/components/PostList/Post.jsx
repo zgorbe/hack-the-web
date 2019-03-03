@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { Card } from 'primereact/card';
 import { Editor } from 'primereact/editor';
 import { InputText } from 'primereact/inputtext';
@@ -54,7 +55,7 @@ class Post extends Component {
         const id  = this.props.id;
 
         if (title.length && content.length) {
-            const saveFn = id !== -1 ? 'updatePost' : 'addPost'; 
+            const saveFn = id !== 'new' ? 'updatePost' : 'addPost'; 
 
             PostService[saveFn](title, content, language, id);
         } else {
@@ -75,7 +76,7 @@ class Post extends Component {
 
         return (
             <div className="post" ref={ this.postElement }>
-                { !edited && id !== -1 &&
+                { !edited && id !== 'new' &&
                     <Card title={ title } footer={ footer }>
                         { this.renderHTML(content) }
                     </Card>
@@ -97,5 +98,14 @@ class Post extends Component {
         );
     }
 }
- 
+
+Post.propTypes = {
+    id: PropTypes.string,
+    authenticated: PropTypes.bool.isRequired,
+    edited: PropTypes.bool,
+    title: PropTypes.string.isRequired,
+    content: PropTypes.string.isRequired,
+    timestamp: PropTypes.number
+}
+
 export default Post;
