@@ -5,7 +5,6 @@ import PostList from './components/PostList/PostList';
 import Contact from './components/Contact/Contact';
 import About from './components/About/About';
 import Login from './components/Login/Login';
-
 import 'primereact/resources/themes/nova-light/theme.css';
 import 'primereact/resources/primereact.min.css';
 import 'primeicons/primeicons.css';

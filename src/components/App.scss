@@ -4,34 +4,44 @@
 @import './Login/Login.scss';
 @import './PostList/PostList.scss';
 @import './Contact/Contact.scss';
+@import './About/About.scss';
 
 html {
+    background-color: #CCC;
     box-sizing: border-box;
+    height: 100%;
+}
+
+body {
+    height: 100%;    
 }
 *, *:before, *:after {
     box-sizing: inherit;
 }
 
-.app {
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 0;
-    & > header {
-        background-color: #242B2E;
-        color: white;
-        font-size: 2em;
-        font-weight: bold;
-        padding: 0.5em 1.5em;
-        text-align: center;
-        @media screen and (min-width: 768px) {
-            text-align: left;
+#root {
+    height: 100%;
+    .app {
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0;
+        & > header {
+            background-color: #242B2E;
+            color: white;
+            font-size: 2em;
+            font-weight: bold;
+            padding: 0.5em 1.5em;
+            text-align: center;
+            @media screen and (min-width: 768px) {
+                text-align: left;
+            }
         }
-    }
 
-    input.error {
-        border: 1px solid red;
-    }
+        input.error {
+            border: 1px solid red;
+        }
 
-    div.error {
-        color: red;
+        div.error {
+            color: red;
+        }
     }
 }
