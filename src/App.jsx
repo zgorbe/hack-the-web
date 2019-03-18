@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Switch, Route } from 'react-router-dom';
+import { Switch, Route, HashRouter } from 'react-router-dom';
 import Menu from './components/Menu/Menu';
 import PostList from './components/PostList/PostList';
 import Contact from './components/Contact/Contact';
@@ -14,18 +14,20 @@ import './styles/App.css';
 class App extends Component {
     render() {
         return (
-            <section className="app p-grid">
-                <header className="p-col-12 p-md-6">Hack The Web</header>
-                <Menu></Menu>
-                <main className="p-md-offset-2 p-md-8 p-col-12">
-                    <Switch>
-                        <Route exact path="/" component={ PostList }></Route>
-                        <Route exact path="/contact" component={ Contact }></Route>
-                        <Route exact path="/about" component={ About }></Route>
-                        <Route exact path="/login" component={ Login }></Route>
-                    </Switch>                
-                </main>
-            </section>
+            <HashRouter>
+                <section className="app p-grid">
+                    <header className="p-col-12 p-md-6">Hack The Web</header>
+                    <Menu></Menu>
+                    <main className="p-md-offset-2 p-md-8 p-col-12">
+                        <Switch>
+                            <Route exact path="/" component={ PostList }></Route>
+                            <Route path="/contact" component={ Contact }></Route>
+                            <Route path="/about" component={ About }></Route>
+                            <Route path="/login" component={ Login }></Route>
+                        </Switch>                
+                    </main>
+                </section>
+            </HashRouter>
         );
     }
 }

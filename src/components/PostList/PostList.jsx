@@ -17,7 +17,9 @@ class PostList extends Component {
     constructor(props) {
         super(props);
         this.postList = React.createRef();    
+    }
 
+    componentWillMount = () => {
         PostService.subscribeForPosts(posts => {
             this.originalList = posts;
 

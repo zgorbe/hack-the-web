@@ -19,10 +19,8 @@ class Contact extends Component {
         isContentValid: true,
         feedbackList: []
     }
-
-    constructor(props) {
-        super(props);
-
+   
+    componentWillMount = () => {
         FeedbackService.subscribeForFeedbacks(feedbacks => {
             this.setState({
                 feedbackList: feedbacks
