@@ -9,15 +9,21 @@ const withAuth = WrappedComponent => {
             this.state = {
                 authenticated: false
             };
+
+            this._mounted = false;
         }
 
-        componentWillMount() {
+        componentDidMount() {
+            this._mounted = true;
             this.removeAuthListener = firebase.auth().onAuthStateChanged(user => {
-                this.setState({ authenticated: !!user });
+                if (this._mounted) {
+                    this.setState({ authenticated: !!user });
+                }
             });
         }
         
         componentWillUnmount() {
+            this._mounted = false;
             this.removeAuthListener();
         }
 

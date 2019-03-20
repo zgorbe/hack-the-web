@@ -19,7 +19,7 @@ class PostList extends Component {
         this.postList = React.createRef();    
     }
 
-    componentWillMount = () => {
+    componentDidMount = () => {
         PostService.subscribeForPosts(posts => {
             this.originalList = posts;
 
