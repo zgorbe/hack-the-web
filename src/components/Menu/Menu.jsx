@@ -5,12 +5,9 @@ function Menu(props) {
     const [location, setLocation] = useState(props.location.pathname);
 
     useEffect(() => {
-        const unlisten = props.history.listen(loc => {
+        return props.history.listen(loc => {
             setLocation(loc.pathname);
         });
-        return function unsubscribe() {
-            unlisten();
-        };
     });
 
     return ( 
