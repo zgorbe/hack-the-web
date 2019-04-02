@@ -14,8 +14,8 @@ function Menu(props) {
         <nav className="menu p-col-12 p-md-6">
             <ul>
                 <li className={ location === '/' ? 'active' :  '' }><a href="#/">Posts</a></li>
-                <li className={ location === '/contact' ? 'active' :  ''}><a href="#/contact">Contact</a></li>
-                <li className={ location === '/about' ? 'active' :  '' }><a href="#/about">About</a></li>
+                <li className={ location === '/contact' ? 'active' :  '' }><a href="#/contact">Contact</a></li>
+                <li className={ location === '/about' ? 'active' :  ''  }><a href="#/about">About</a></li>
             </ul>
         </nav>
     );
